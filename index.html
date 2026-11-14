@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#10283f">
+  <title>Finish Line Timer</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="eyebrow">RACE TIMING • MODE LOKAL</div>
+    <h1>FINISH LINE TIMER</h1>
+    <p>Pencatatan kedatangan pelari</p>
+  </header>
+
+  <main>
+    <section class="camera-card">
+      <div class="section-head">
+        <h2>Kamera garis finis</h2>
+        <span id="cameraStatus" class="status">KAMERA NONAKTIF</span>
+      </div>
+      <div class="video-wrap">
+        <video id="preview" autoplay muted playsinline></video>
+        <div id="placeholder" class="placeholder">
+          <div class="camera-icon">◉</div>
+          <strong>Pratinjau kamera</strong>
+          <span>Tekan “Aktifkan Kamera” untuk mulai</span>
+        </div>
+      </div>
+      <div class="controls">
+        <button id="cameraBtn" class="primary">Aktifkan Kamera</button>
+        <button id="recordBtn" disabled>Mulai Rekam</button>
+        <button id="stopBtn" disabled class="danger">Berhenti</button>
+      </div>
+      <p class="hint">Gunakan kamera belakang dan arahkan ke garis finis. Izin kamera akan diminta oleh browser.</p>
+      <p id="message" class="message" role="status">Aplikasi siap. Kamera belum diaktifkan.</p>
+    </section>
+
+    <section class="stats">
+      <div class="stat"><span>Status rekaman</span><strong id="recordStatus">Belum merekam</strong></div>
+      <div class="stat"><span>Durasi sesi</span><strong id="elapsed">00:00</strong></div>
+    </section>
+
+    <section class="saved-card">
+      <h2>Rekaman terakhir</h2>
+      <p id="savedInfo">Belum ada video yang disimpan.</p>
+      <a id="downloadLink" hidden>Unduh video terakhir</a>
+    </section>
+    <footer>Versi awal • Tahap 2 • Data video disimpan ke perangkat saat diunduh</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

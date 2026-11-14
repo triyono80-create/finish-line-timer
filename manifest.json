@@ -1,0 +1,9 @@
+{
+  "name": "Finish Line Timer",
+  "short_name": "Finish Timer",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#eef3f7",
+  "theme_color": "#10283f",
+  "description": "Aplikasi pencatatan kedatangan pelari secara lokal"
+}
